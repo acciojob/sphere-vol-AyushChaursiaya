@@ -1,3 +1,11 @@
+// script.js
+document.getElementById("MyForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent form submission
+    
+    // Call the volume_sphere function when the form is submitted
+    volume_sphere();
+});
+
 function volume_sphere() {
     // Retrieve the radius value entered by the user
     const radiusInput = document.getElementById("radius").value;
@@ -14,10 +22,10 @@ function volume_sphere() {
         const roundedVolume = volume.toFixed(4);
 
         // Display the calculated volume in the designated output field
-        document.getElementById("result").value = roundedVolume;
+        document.getElementById("volume").value = roundedVolume;
     } else {
         // If input is not valid, display 'NaN' in the output field
-        document.getElementById("result").value = 'NaN';
+        document.getElementById("volume").value = 'NaN';
     }
 }
 
